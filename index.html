@@ -133,8 +133,23 @@
 <body>
   <h1>📸 My Photo Gallery</h1>
 
- <audio id="music" src="music.mp3" preload="auto"></audio>
-<button onclick="document.getElementById('music').play()">▶️ Play Music</button>
+<audio id="music" src="music.mp3" preload="auto"></audio>
+<button onclick="playMusic()">▶️ Play Music</button>
+
+<script>
+  function playMusic() {
+    const music = document.getElementById("music");
+    music.play()
+      .then(() => {
+        console.log("音乐播放成功！");
+      })
+      .catch((err) => {
+        console.error("播放失败：", err);
+        alert("音乐播放失败！请确认浏览器允许播放音频，或尝试点击页面后再播放。");
+      });
+  }
+</script>
+
 
 
 
@@ -273,6 +288,7 @@
   </script>
 </body>
 </html>
+
 
 
 
