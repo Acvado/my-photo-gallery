@@ -133,7 +133,9 @@
 <body>
   <h1>📸 My Photo Gallery</h1>
 
-  <audio id="shutterSound" src="music.mp3" preload="auto"></audio>
+  <audio id="music" src="music.mp3" preload="auto"></audio>
+  <button onclick="document.getElementById('music').play()">▶️ Play Music</button>
+
 
   <h2>Upload your image:</h2>
   <input type="file" id="imageUpload" accept="image/*">
@@ -270,4 +272,5 @@
   </script>
 </body>
 </html>
+
 
